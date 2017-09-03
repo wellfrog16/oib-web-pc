@@ -48,7 +48,8 @@
         //'bootstrap': ['https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min'],
 
         // app
-        'script' : 'app/script'
+        'script' : 'app/script',
+        'web' : 'app/web'
     },
 
     shim: {

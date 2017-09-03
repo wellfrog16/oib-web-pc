@@ -1,4 +1,5 @@
-﻿@import 'common.less';
+﻿@import '../js/lib/bootstrap/less-3.3.7/bootstrap.less';
+@import 'common.less';
 
 // ------------------------------------初始化-----------------------------------------
 html, body {
@@ -35,6 +36,7 @@ html, body {
 
 .wrapper {
     //max-width: @web-width;
+    min-width: @web-width;
     width: 100%;
     margin: 0 auto;
 }
@@ -44,14 +46,127 @@ html, body {
 }
 
 // ------------------------------------覆盖bootstrap样式-----------------------------------------
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto,
-.col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto,
-.col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto,
-.col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto,
-.col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-    padding: 0;
+
+
+// ------------------------------------header-----------------------------------------
+
+.header {
+    height: 58px;
+    border-bottom:1px solid @main-color;
+
+    @margin-top: 15px;
+    
+    // logo
+    .logo {
+        margin-top: @margin-top;
+    }
+
+    #nav-toggle {
+        text-align: right;
+
+        div {
+            display: inline-block;
+            font-size: 18px;
+            color: @main-color;
+            position: relative;
+            top: -2px;
+            margin-right: 20px;
+
+            span {
+                position: relative;
+                top: -2px;
+            }
+
+            a {
+                font-weight: bold;
+                color: @main-color;             
+            }
+        }
+    }
+
+    // 导航按钮
+    .nav-toggle {        
+        margin-top: @margin-top + 3px;
+        cursor: pointer;
+    }
 }
 
+#page-name {
+    text-align: center;
+    line-height: 58px;
+    font-weight: bold;
+    color: @main-color;
+    letter-spacing: 10px;
+    font-size: 18px;
+}
+
+// ------------------------------------header-----------------------------------------
+
+.footer {
+    height: 330px;
+    background-color: @main-color;
+
+}
+
+
+// ------------------------------------导航-----------------------------------------
+
+.nav {
+    position: fixed;
+    background-color: #fff;
+    height: 100vh;
+    width: 250px;
+    right: -250px;
+    //right: 0;
+    z-index: 99;
+    
+    .close {
+        margin: 36px 0 36px 80%;
+        cursor: pointer;
+    }
+
+    @border-color:#eaa7a2;
+    @padding-left:30px;
+
+    ul.link {
+        border-top: 1px solid @border-color;
+        li a {
+            display: block;
+            border-bottom: 1px solid @border-color;
+            height: 73px;
+            line-height: 73px;
+            padding-left: @padding-left;
+            font-size: 20px;
+            color: @main-color;
+            font-weight: lighter;
+
+            &:hover {
+                background-color: @main-color;
+                color: #FFF;
+            }
+        }
+    }
+
+    ul.share {
+        margin-top: 95px;
+        padding-left: @padding-left;
+
+        li { 
+            display: inline-block; 
+            margin-right: 16px;
+        }
+        a {
+
+        }
+    }
+
+    .copyright {
+        margin-top: 15px;
+        padding-left: @padding-left;
+        color: @main-color;
+        font-size: 10px;
+    }
+}
 
 // ------------------------------------首页-----------------------------------------
 
@@ -67,14 +182,15 @@ html, body {
         @margin-top: 15px;
 
         // logo
-        .logo img {
+        .logo {
             margin-top: @margin-top;
         }
 
         // 导航按钮
         .nav-toggle {
-            text-align: right;
+            float: right;
             margin-top: @margin-top;
+            cursor: pointer;
         }
 
         // 主文字
@@ -83,39 +199,6 @@ html, body {
             position: relative;
             top: -205px;
             text-align: center;
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    .nav {
-        position: fixed;
-        background-color: #fff;
-        height: 100vh;
-        width: 250px;
-        right: 0;
-        
-        .oclose {
-            margin: 36px 0 36px 80%;
-        }
-
-        @border-color:#eaa7a2;
-        ul {
-            border-top: 1px solid @border-color;
-            li a {
-                display: block;
-                border-bottom: 1px solid @border-color;
-                height: 73px;
-                line-height: 73px;
-                padding-left: 30px;
-
-                &:hover {
-                    background-color: @main-color;
-                    color: #FFF;
-                }
-            }
         }
     }
 }

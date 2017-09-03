@@ -1,22 +1,24 @@
 // 剧本
 
-define(['text!../template/test.html!strip'], function (testHtml) {
+define(['jquery', 'web'], function ($, web) {
     var self = {}
 
     self.open = function () {
-        console.log('加载完成！');
+        var page = $('body').attr('data-page');
 
-        //$.cookie('QQ', '123456');
-
-
-        //console.log($.cookie('QQ'));
-
-        // $('#qq').hammer().on('tap', function () {
-        //     $('body').append(testHtml);
-        // })
+        // 载入导航
+        switch (page) {
+            case 'index':
+                web.nav();                
+                break;
         
-
-        // $.Deferred
+            default:                
+                web.header();
+                web.nav();
+                web.footer();
+                break;
+        }
+        
     }
 
     return self;

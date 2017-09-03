@@ -26,9 +26,6 @@ gulp.task('clean', function(cb){
 gulp.task('less', function(cb){
     gulp.src('src/style/main.less')
         .pipe(less())
-        .pipe(rename(function(path){
-            path.basename += '.min';
-        }))
         .pipe(gulp.dest('./src/style'));
     cb();
 });
@@ -41,6 +38,9 @@ gulp.task('cleancss', function(cb){
         ])
         .pipe(concat('main.min.css'))
         .pipe(cleanCSS())
+        .pipe(rename(function(path){
+            path.basename += '.min';
+        }))
         .pipe(gulp.dest('dist/style'))
         //.pipe(notify('CSS合并压缩完成'));
     cb();
@@ -139,7 +139,7 @@ gulp.task('requirejs', function(cb) {
 
 // html替换压缩
 gulp.task('htmlreplace', function(cb) {
-    gulp.src('src/index.html')
+    gulp.src('src/*.html')
         .pipe(htmlreplace({
             'js': ['js/require.combine.js', 'js/main.min.js'],
             'css': 'style/main.min.css'
