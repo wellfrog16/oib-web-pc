@@ -1,0 +1,121 @@
+﻿@import 'common.less';
+
+// ------------------------------------初始化-----------------------------------------
+html, body {
+    .percent-box();
+
+    font-family: HurmeGeometricSans3, Futura, Din, Helvetica Neue, Helvetica, Arial, '思源黑体', Hiragino Sans GB, '华文细黑', STXihei, '微软雅黑', Microsoft yahei, Sans-serif;
+    font-size:14px;
+
+    color:#000;
+}
+
+
+// ------------------------------------loading-------------------------------------
+.loading {
+    .percent-box();
+
+    position:absolute;
+    text-align:center;
+    color:#333;
+    top:0;
+    left:0;
+    line-height:90vh;
+    z-index:99;
+    background-color:#fff;
+}
+
+
+// ------------------------------------全局变量-------------------------------------
+@web-width:1440px;
+@main-color:#da291c;
+
+
+// ------------------------------------框架-----------------------------------------
+
+.wrapper {
+    //max-width: @web-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box-padding {
+    padding: 0 30px;
+}
+
+// ------------------------------------覆盖bootstrap样式-----------------------------------------
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto,
+.col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto,
+.col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto,
+.col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto,
+.col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding: 0;
+}
+
+
+// ------------------------------------首页-----------------------------------------
+
+.index {
+    height: 100%;
+    position: relative;
+
+    .main {
+        .percent-box();        
+        position: absolute;
+        background-color:@main-color;
+
+        @margin-top: 15px;
+
+        // logo
+        .logo img {
+            margin-top: @margin-top;
+        }
+
+        // 导航按钮
+        .nav-toggle {
+            text-align: right;
+            margin-top: @margin-top;
+        }
+
+        // 主文字
+        .text {
+            margin-top: 50vh;
+            position: relative;
+            top: -205px;
+            text-align: center;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .nav {
+        position: fixed;
+        background-color: #fff;
+        height: 100vh;
+        width: 250px;
+        right: 0;
+        
+        .oclose {
+            margin: 36px 0 36px 80%;
+        }
+
+        @border-color:#eaa7a2;
+        ul {
+            border-top: 1px solid @border-color;
+            li a {
+                display: block;
+                border-bottom: 1px solid @border-color;
+                height: 73px;
+                line-height: 73px;
+                padding-left: 30px;
+
+                &:hover {
+                    background-color: @main-color;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
