@@ -701,6 +701,20 @@ img {
 a {
   text-decoration: none;
 }
+.clearfix,
+.container,
+.container-fluid,
+.row {
+  zoom: 1;
+}
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  content: '';
+  clear: both;
+  display: block;
+}
 html,
 body {
   width: 100%;
@@ -770,6 +784,35 @@ body {
 .footer {
   height: 330px;
   background-color: #da291c;
+}
+.footer h3 {
+  color: #FFF;
+  height: 80px;
+  font-size: 15px;
+  line-height: 80px;
+}
+.footer .row {
+  margin-bottom: 30px;
+}
+.footer .email {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+}
+.footer .line {
+  border-top: 1px solid #FFF;
+  padding-top: 12px;
+}
+.footer ul.share {
+  text-align: right;
+}
+.footer ul.share li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.footer .copyright {
+  color: #FFF;
+  font-size: 10px;
 }
 .nav {
   position: fixed;
