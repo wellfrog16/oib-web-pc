@@ -22,7 +22,7 @@ define(['jquery', 'web', 'swiper'], function ($, web, swiper) {
         // swiper
         var mySwiper = new swiper('.swiper-container', {
             loop: true,
-            autoplay: 4000,
+            //autoplay: 4000,
             paginationClickable: true,
             autoplayDisableOnInteraction: false,
             speed: 1500,
