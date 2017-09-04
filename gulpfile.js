@@ -36,7 +36,7 @@ gulp.task('cleancss', function(cb){
             'src/style/*.css'
             , 'src/js/lib/swiper/*.css'
         ])
-        .pipe(concat('main.min.css'))
+        .pipe(concat('main.css'))
         .pipe(cleanCSS())
         .pipe(rename(function(path){
             path.basename += '.min';
@@ -82,41 +82,9 @@ gulp.task('cdist', function() {
 // AMD解析打包
 gulp.task('js:main', function () {
     gulp.src('src/js/app.js')
-        .pipe(requirejsOptimize(
-            {
-                baseUrl: "src/js",
-
-                buildCSS: false,
-                inlineText : true,
-            
-                map: {
-                    '*': {
-                        'css': 'requirejs/css.min'
-                    }
-                },
-            
-                paths: {
-                    // lib
-                    'jquery': 'lib/jquery/jquery-3.1.0.min',
-                    'jquery.cookie': 'lib/jquery/jquery.cookie',
-                    'jquery.hammer': 'lib/jquery/jquery.hammer',
-                    'hammer': 'lib/jquery/hammer.min',
-            
-                    'swiper': 'lib/swiper/swiper-3.4.2.jquery.min',
-            
-                    'text' : 'requirejs/text',
-                    //'bootstrap': ['https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min'],
-            
-                    // app
-                    'script' : 'app/script'
-                },
-            
-                shim: {
-                    'swiper': ['css!lib/swiper/swiper-3.4.2.min.css'],
-                    'jquery.cookie' : ['jquery']
-                }
-            }
-        ))
+        .pipe(requirejsOptimize({
+            mainConfigFile: 'src/js/requirejs/require.config.js'
+        }))
         .pipe(rename('main.min.js'))
         // .pipe(rename(function(path){
         //     path.basename += '.min';
