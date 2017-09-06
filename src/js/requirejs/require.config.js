@@ -45,7 +45,7 @@
 
         'text' : 'requirejs/text',
         //'css' : 'requirejs/css.min',
-        //'bootstrap': ['https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min'],
+        'bootstrap': ['lib/bootstrap/bootstrap-3.3.7.min'],
 
         // app
         'script' : 'app/script',
@@ -53,6 +53,7 @@
     },
 
     shim: {
+        // 'bootstrap': ['css!./lib/bootstrap/bootstrap-3.3.7.min.css'],
         'swiper': ['css!./lib/swiper/swiper-3.4.2.min.css'],
         'jquery.cookie' : ['jquery']
     },
