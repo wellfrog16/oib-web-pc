@@ -1,6 +1,6 @@
 // 剧本
 
-define(['jquery', 'web', 'swiper'], function ($, web, swiper) {
+define(['jquery', 'web', 'swiper', 'bootstrap', 'i18n!./nls/message'], function ($, web, swiper, bootstrap, i18n) {
     var self = {}
 
     self.open = function () {
