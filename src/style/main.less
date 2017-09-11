@@ -228,7 +228,7 @@ html, body {
 
     h4 {
         width: 80%;
-        height: 34px;
+        padding-bottom: 12px;
         border-bottom: 2px solid @main-color;        
     }
 }
@@ -470,6 +470,18 @@ html, body {
         padding-top: 58px;
         padding-bottom: 50px;
     }
+
+    .detail {
+        font-size: 14px;
+    }
+
+    a{
+        color: #000;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 // ------------------------------------about-----------------------------------------
@@ -521,10 +533,12 @@ html, body {
                 background-color: #FFF;
                 border-top: 1px solid @main-color;
                 cursor: pointer;
+                transition: all 0.3s ease-in-out; 
 
                 &.active {
                     color: #FFF;
                     background-color: @main-color;
+                    transition: all 0.3s ease-in-out; 
                 }
             }
 
@@ -535,15 +549,40 @@ html, body {
                 padding: 20px 20px 50px 20px;
                 color: #000;
                 font-size: 14px;
-                line-height: 20px;
+                line-height: 24px;
                 display: none;
             }
         }
     }
+
+    .people {
+
+        .photo {
+            padding: 20px;
+            img {
+                width: 100%;
+            }
+        }
+
+        .info {
+            padding: 20px;
+            padding-top: 17px;  // 修复偏差，顶部对齐
+
+            h4 {
+                margin-bottom: 20px;
+                line-height: 20px;
+
+                span {
+                    display: block;
+                    font-weight: normal;
+                }
+            }            
+        }
+    }
 }
 
-// ------------------------------------clients-----------------------------------------
-.clients {
+// ------------------------------------service-----------------------------------------
+.service {
     .header-margin();
 
 

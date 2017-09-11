@@ -55,8 +55,8 @@ define(['jquery', 'web', 'swiper', 'bootstrap', 'i18n!./nls/message'], function 
             })
         })
 
-        // clients
-        $('.clients .category .item')
+        // service
+        $('.service .category .item')
             .on('mouseenter', function(){
                 $(this).addClass('hover');
             })
@@ -64,18 +64,18 @@ define(['jquery', 'web', 'swiper', 'bootstrap', 'i18n!./nls/message'], function 
                 $(this).removeClass('hover');
             });
 
-        $('.clients .category .letter').on('click', function(){
-            $('.clients .result-letter').show();
-            $('.clients .result-other').hide();
+        $('.service .category .letter').on('click', function(){
+            $('.service .result-letter').show();
+            $('.service .result-other').hide();
 
-            $('.clients .category .item').removeClass('active');
+            $('.service .category .item').removeClass('active');
             $(this).addClass('active');
         })
 
-        $('.clients .category .industry, .clients .category .service').on('click', function(){
-            $('.clients .result-letter').hide();
-            $('.clients .result-other').show();
-            $('.clients .category .item').removeClass('active hover');
+        $('.service .category .industry, .service .category .project').on('click', function(){
+            $('.service .result-letter').hide();
+            $('.service .result-other').show();
+            $('.service .category .item').removeClass('active hover');
             $(this).addClass('active');
         })
     }

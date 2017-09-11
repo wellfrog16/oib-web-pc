@@ -5,7 +5,7 @@ define({
         'works' : 'works',
         'about' : 'about',
         'news' : 'news',
-        'clients' : 'clients',
+        'service' : 'service',
         'links' : 'links',
         'contact' : 'contact'
     }

@@ -76,8 +76,9 @@
     },
 
     shim: {
-        'bootstrap': ['css!./lib/bootstrap/bootstrap-3.3.7.min.css'],
+        //'bootstrap': ['css!./lib/bootstrap/bootstrap-3.3.7.min.css'],
         'swiper': ['css!./lib/swiper/swiper-3.4.2.min.css'],
+        'bootstrap' : ['jquery'],
         'jquery.cookie' : ['jquery']
     },
 

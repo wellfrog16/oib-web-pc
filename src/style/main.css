@@ -1005,7 +1005,7 @@ body {
 }
 .side-column h4 {
   width: 80%;
-  height: 34px;
+  padding-bottom: 12px;
   border-bottom: 2px solid #da291c;
 }
 .index {
@@ -1190,6 +1190,15 @@ body {
   padding-top: 58px;
   padding-bottom: 50px;
 }
+.news-detail .detail {
+  font-size: 14px;
+}
+.news-detail a {
+  color: #000;
+}
+.news-detail a:hover {
+  text-decoration: underline;
+}
 .about {
   padding-top: 58px;
 }
@@ -1230,10 +1239,12 @@ body {
   background-color: #FFF;
   border-top: 1px solid #da291c;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .about .list li h3.active {
   color: #FFF;
   background-color: #da291c;
+  transition: all 0.3s ease-in-out;
 }
 .about .list li > div {
   width: 66.66666667%;
@@ -1241,16 +1252,34 @@ body {
   padding: 20px 20px 50px 20px;
   color: #000;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 24px;
   display: none;
 }
-.clients {
+.about .people .photo {
+  padding: 20px;
+}
+.about .people .photo img {
+  width: 100%;
+}
+.about .people .info {
+  padding: 20px;
+  padding-top: 17px;
+}
+.about .people .info h4 {
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+.about .people .info h4 span {
+  display: block;
+  font-weight: normal;
+}
+.service {
   padding-top: 58px;
 }
-.clients .category ul {
+.service .category ul {
   font-size: 0;
 }
-.clients .category ul > li {
+.service .category ul > li {
   display: inline-block;
   height: 105px;
   line-height: 105px;
@@ -1263,13 +1292,13 @@ body {
   position: relative;
   cursor: pointer;
 }
-.clients .category ul > li ol {
+.service .category ul > li ol {
   position: absolute;
   width: 100%;
   display: none;
   z-index: 1;
 }
-.clients .category ul > li ol li {
+.service .category ul > li ol li {
   display: block;
   height: 40px;
   line-height: 40px;
@@ -1279,11 +1308,11 @@ body {
   border-bottom: 1px solid #FFF;
   cursor: pointer;
 }
-.clients .category ul > li ol li:hover {
+.service .category ul > li ol li:hover {
   background-color: #da291c;
   color: #FFF;
 }
-.clients .category ul > li span {
+.service .category ul > li span {
   display: inline-block;
   height: 14px;
   width: 27px;
@@ -1294,25 +1323,25 @@ body {
   right: 30px;
   top: 47px;
 }
-.clients .category ul > li.letter {
+.service .category ul > li.letter {
   border-left: 0px;
 }
-.clients .category ul > li.active,
-.clients .category ul > li.hover {
+.service .category ul > li.active,
+.service .category ul > li.hover {
   background-color: #da291c;
   color: #FFF;
 }
-.clients .category ul > li.active span,
-.clients .category ul > li.hover span {
+.service .category ul > li.active span,
+.service .category ul > li.hover span {
   background-position: 0 -14px;
 }
-.clients .category ul > li.hover ol {
+.service .category ul > li.hover ol {
   display: block;
 }
-.clients .category .result-letter {
+.service .category .result-letter {
   min-height: 800px;
 }
-.clients .category .result-letter .nav-letter {
+.service .category .result-letter .nav-letter {
   text-align: center;
   color: #da291c;
   font-size: 20px;
@@ -1321,29 +1350,29 @@ body {
   line-height: 65px;
   border-bottom: 1px solid #da291c;
 }
-.clients .category .result-letter .nav-letter span {
+.service .category .result-letter .nav-letter span {
   cursor: pointer;
   margin: 0 10px;
 }
-.clients .category .result-letter .result .row {
+.service .category .result-letter .result .row {
   min-height: 100px;
   height: auto;
   border-bottom: 1px dotted #000;
 }
-.clients .category .result-letter .result .row:last-child {
+.service .category .result-letter .result .row:last-child {
   border-bottom: 0;
 }
-.clients .category .result-letter .result .row .letter {
+.service .category .result-letter .result .row .letter {
   height: 100px;
   line-height: 100px;
   text-align: center;
   font-size: 22px;
   font-weight: bold;
 }
-.clients .category .result-letter .result .row .list {
+.service .category .result-letter .result .row .list {
   padding: 20px 0;
 }
-.clients .category .result-letter .result .row .list span {
+.service .category .result-letter .result .row .list span {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -1354,28 +1383,28 @@ body {
   position: relative;
   top: 1px;
 }
-.clients .category .result-other {
+.service .category .result-other {
   min-height: 800px;
   display: none;
 }
-.clients .category .result-other .result {
+.service .category .result-other .result {
   width: 83.33333333%;
   margin: 0 auto;
   padding-top: 40px;
 }
-.clients .category .result-other .result h3 {
+.service .category .result-other .result h3 {
   color: #da291c;
   display: inline-block;
   padding-right: 30xp;
   border-bottom: 2px solid #da291c;
   margin-bottom: 25px;
 }
-.clients .category .result-other .result h3:after {
+.service .category .result-other .result h3:after {
   content: '';
   display: inline-block;
   width: 30px;
 }
-.clients .category .row > div {
+.service .category .row > div {
   line-height: 24px;
 }
 .contact {
