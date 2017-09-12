@@ -6,7 +6,6 @@ define({
         'about' : 'about',
         'news' : 'news',
         'service' : 'service',
-        'links' : 'links',
         'contact' : 'contact'
     }
 })
