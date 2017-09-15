@@ -8,11 +8,12 @@
         i18n : {
             locale : (function(){
                 try {
-                    var lang = 'en',
+                    var def = 'zh-cn';
+                    var lang = def,
                         arr,reg=new RegExp("(^| )lang=([^;]*)(;|$)"),
                         m = {'en':true, 'zh-cn': true};
                     if(arr=document.cookie.match(reg)){ lang = unescape(arr[2]);};
-                    if(!m[lang]) { lang = 'en';};
+                    if(!m[lang]) { lang = def;};
                     return lang;
                 }
                 catch(e) {
@@ -77,7 +78,7 @@
 
     shim: {
         //'bootstrap': ['css!./lib/bootstrap/bootstrap-3.3.7.min.css'],
-        'swiper': ['css!./lib/swiper/swiper-3.4.2.min.css'],
+        //'swiper': ['css!./lib/swiper/swiper-3.4.2.min.css'],
         'bootstrap' : ['jquery'],
         'jquery.cookie' : ['jquery']
     },

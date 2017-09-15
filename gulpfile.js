@@ -62,6 +62,12 @@ gulp.task('image', () =>
         .pipe(gulp.dest('dist/asset/img'))
 );
 
+// copy 视音频
+gulp.task('video', () =>
+gulp.src(['src/asset/**/*.mp4', 'src/asset/**/*.mp3'])
+    .pipe(gulp.dest('dist/asset'))
+);
+
 // 打开开发服务器
 gulp.task('cdev', function() {
     gulp.start('watch');
@@ -131,5 +137,5 @@ gulp.task('watch',function(){
 
 // 组合操作
 gulp.task('default', ['clean'], function(cb) {
-    gulp.start('js:main', 'requirejs', 'i18n', 'cleancss', 'image', 'htmlreplace');
+    gulp.start('js:main', 'requirejs', 'i18n', 'cleancss', 'image', 'video', 'htmlreplace');
 });

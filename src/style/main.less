@@ -30,6 +30,7 @@ html, body {
 // ------------------------------------全局变量-------------------------------------
 @web-width:1440px;
 @main-color:#da291c;
+@main-color:#cb171f;
 
 
 // ------------------------------------框架-----------------------------------------
@@ -66,7 +67,7 @@ html, body {
         margin-top: @margin-top;
     }
 
-    #nav-toggle {
+    .corner {
         text-align: right;
 
         div {
@@ -235,14 +236,25 @@ html, body {
 
 // ------------------------------------index-----------------------------------------
 
+video {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
 .index {
     height: 100%;
     position: relative;
+    overflow: hidden;
+    background-color: @main-color;
 
     .main {
         .percent-box();        
         position: absolute;
-        background-color:@main-color;
+        //background-color:@main-color;
 
         @margin-top: 15px;
 
@@ -770,7 +782,7 @@ html, body {
         }
 
         .map {
-            img {width: 100%;}
+            height: 50vh;
         }
     }
 }
