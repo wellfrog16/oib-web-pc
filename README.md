@@ -1,1 +1,1 @@
-obi-web-pc-en
+obi-web-pc
