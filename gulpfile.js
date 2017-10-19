@@ -137,5 +137,5 @@ gulp.task('watch',function(){
 
 // 组合操作
 gulp.task('default', ['clean'], function(cb) {
-    gulp.start('js:main', 'requirejs', 'i18n', 'cleancss', 'image', 'video', 'htmlreplace');
+    gulp.start('less', 'js:main', 'requirejs', 'i18n', 'cleancss', 'image', 'video', 'htmlreplace');
 });
