@@ -249,6 +249,23 @@ html, body {
         padding-bottom: 12px;
         border-bottom: 2px solid @main-color;        
     }
+    .bar-press div{
+        height:1px;
+        display:block;
+        background-color:@main-color;
+        width:0;
+        position: absolute;
+        left: 0;
+        animation:progressbar 3s forwards;
+    }
+    @-webkit-keyframes progressbar { 
+        from {
+            width:0
+        }
+        to {
+            width:60%
+        }
+    }
 }
 
 // ------------------------------------index-----------------------------------------
@@ -489,6 +506,10 @@ video {
             display: table-cell;
             vertical-align:middle;
             text-align:center;
+            h3{
+                font-weight: normal;
+                font-size: 17px;
+            }
         }
     }
 }
@@ -559,7 +580,7 @@ video {
                 height: 125px;
                 line-height: 125px;
                 color: @main-color;
-                font-weight: bold;
+                font-weight: normal;
                 font-size: 30px;
                 text-align: center;
                 background-color: #FFF;
