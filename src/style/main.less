@@ -66,63 +66,14 @@ html, body {
     .logo {
         margin-top: @margin-top;
     }
-    .bar-press progress, progress::-webkit-progress-bar{
-    height:1px;
-    display:block;
-    background-color:#da291c;
-    width:0;
-    -webkit-border-radius: 8px;
-    border-radius:8px;
-    color: #fff;
-    -webkit-transition:width .8s ease;
-    -moz-transition:width .8s ease;
-    transition:width .8s ease;
-    -webkit-animation:progressbar 3s ;
-    animation:progressbar 3s ;
-    }
-
-     .bar-press progress::-moz-progress-bar {
-    height:1px;
-    display:block;
-    background-color:#8e44ad;
-    width:0;
-    -webkit-border-radius: 8px;
-    border-radius:8px;
-    color: #fff;
-    -webkit-transition:width .8s ease;
-    -moz-transition:width .8s ease;
-    transition:width .8s ease;
-    -webkit-animation:progressbar 3s ;
-    animation:progressbar 3s ;
-    }
-    .bar-press progress::-webkit-progress-bar{
-    height:1px;
-    display:block;
-    background-color:#8e44ad;
-    width:0;
-    -webkit-border-radius: 8px;
-    border-radius:8px;
-    color: #fff;
-    -webkit-transition:width .8s ease;
-    -moz-transition:width .8s ease;
-    transition:width .8s ease;
-    -webkit-animation:progressbar 3s ;
-    animation:progressbar 3s 
-    }
-
-    .bar-press progress::-moz-progress-bar {
-    height:1px;
-    display:block;
-    background-color:#8e44ad;
-    width:0;
-    -webkit-border-radius: 8px;
-    border-radius:8px;
-    color: #fff;
-    -webkit-transition:width .8s ease;
-    -moz-transition:width .8s ease;
-    transition:width .8s ease;
-    -webkit-animation:progressbar 3s ;
-    animation:progressbar 3s 
+   .bar-press div{
+        height:1px;
+        display:block;
+        background-color:@main-color;
+        width:0;
+        position: absolute;
+        left: 0;
+        animation:progressbar 3s ;
     }
     @-webkit-keyframes progressbar { 
         from {
