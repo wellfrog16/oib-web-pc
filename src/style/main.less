@@ -66,7 +66,72 @@ html, body {
     .logo {
         margin-top: @margin-top;
     }
+    .bar-press progress, progress::-webkit-progress-bar{
+    height:1px;
+    display:block;
+    background-color:#da291c;
+    width:0;
+    -webkit-border-radius: 8px;
+    border-radius:8px;
+    color: #fff;
+    -webkit-transition:width .8s ease;
+    -moz-transition:width .8s ease;
+    transition:width .8s ease;
+    -webkit-animation:progressbar 3s ;
+    animation:progressbar 3s ;
+    }
 
+     .bar-press progress::-moz-progress-bar {
+    height:1px;
+    display:block;
+    background-color:#8e44ad;
+    width:0;
+    -webkit-border-radius: 8px;
+    border-radius:8px;
+    color: #fff;
+    -webkit-transition:width .8s ease;
+    -moz-transition:width .8s ease;
+    transition:width .8s ease;
+    -webkit-animation:progressbar 3s ;
+    animation:progressbar 3s ;
+    }
+    .bar-press progress::-webkit-progress-bar{
+    height:1px;
+    display:block;
+    background-color:#8e44ad;
+    width:0;
+    -webkit-border-radius: 8px;
+    border-radius:8px;
+    color: #fff;
+    -webkit-transition:width .8s ease;
+    -moz-transition:width .8s ease;
+    transition:width .8s ease;
+    -webkit-animation:progressbar 3s ;
+    animation:progressbar 3s 
+    }
+
+    .bar-press progress::-moz-progress-bar {
+    height:1px;
+    display:block;
+    background-color:#8e44ad;
+    width:0;
+    -webkit-border-radius: 8px;
+    border-radius:8px;
+    color: #fff;
+    -webkit-transition:width .8s ease;
+    -moz-transition:width .8s ease;
+    transition:width .8s ease;
+    -webkit-animation:progressbar 3s ;
+    animation:progressbar 3s 
+    }
+    @-webkit-keyframes progressbar { 
+        from {
+            width:0
+        }
+        to {
+            width:100%
+        }
+    }
     .corner {
         text-align: right;
 
@@ -120,6 +185,7 @@ html, body {
         height: 80px;
         font-size: 15px;
         line-height: 80px;
+        font-weight: normal;
     }
 
     .row {
@@ -129,7 +195,7 @@ html, body {
     .email {
         color: #FFF;
         font-size: 20px;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .line {
@@ -295,7 +361,7 @@ video {
         .text1 {
             display: inline-block;
             width: 318px;
-            height: 46px;
+            height: 30px;
             background-image: url('../asset/img/index/text12.png');
             background-repeat: no-repeat;
             overflow: hidden;
@@ -305,7 +371,7 @@ video {
         .text2 {
             display: inline-block;
             width: 299px;
-            height: 46px;
+            height: 30px;
             background-image: url('../asset/img/index/text22.png');
             background-repeat: no-repeat;
             overflow: hidden;
@@ -315,7 +381,7 @@ video {
         .text3 {
             display: inline-block;
             width: 459px;
-            height: 46px;
+            height: 30px;
             background-image: url('../asset/img/index/text32.png');
             background-repeat: no-repeat;
             overflow: hidden;
@@ -325,7 +391,7 @@ video {
         .text4 {
             display: inline-block;
             width: 547px;
-            height: 46px;
+            height: 30px;
             background-image: url('../asset/img/index/text42.png');
             background-repeat: no-repeat;
             overflow: hidden;
@@ -941,8 +1007,8 @@ video {
 
 @keyframes kf-roll {
     0% { background-position-y:0; }
-    6% { background-position-y:-46px; }
-    50% { background-position-y:-46px; }
+    6% { background-position-y:-30px; }
+    50% { background-position-y:-30px; }
     56% { background-position-y:0; }
     //100% { background-position-y:0; }
 }
