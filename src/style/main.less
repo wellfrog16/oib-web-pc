@@ -249,6 +249,23 @@ html, body {
         padding-bottom: 12px;
         border-bottom: 2px solid @main-color;        
     }
+    .bar-press div{
+        height:1px;
+        display:block;
+        background-color:@main-color;
+        width:0;
+        position: absolute;
+        left: 0;
+        animation:progressbar 3s forwards;
+    }
+    @-webkit-keyframes progressbar { 
+        from {
+            width:0
+        }
+        to {
+            width:60%
+        }
+    }
 }
 
 // ------------------------------------index-----------------------------------------
